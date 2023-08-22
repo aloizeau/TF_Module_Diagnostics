@@ -1,3 +1,7 @@
+# Sample of Terraform module for diagnostic settings
+
+> Read my article on this topic here:  [Blog Smart Cloud Architect - Azure Diagnostic Settings](https://blog.smartcloudarchitect.fr/terraform-module-azure-diagnostic-settings)
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
