@@ -6,7 +6,7 @@ data "azurerm_monitor_diagnostic_categories" "categories" {
 resource "azurerm_monitor_diagnostic_setting" "diagnostic_setting" {
   count                      = length(var.targets_resource_id)
   name                       = split("/", var.log_analytics_workspace_id)[length(split("/", var.log_analytics_workspace_id)) - 1]
-  target_resource_id         = data.azurerm_monitor_diagnostic_categories.categories[count.index].id
+  target_resource_id         = var.targets_resource_id[count.index]
   log_analytics_workspace_id = var.log_analytics_workspace_id
 
   dynamic "metric" {
